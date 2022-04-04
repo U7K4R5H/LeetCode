@@ -7,10 +7,10 @@ class Solution {
             current=current.next;
         }
         int size=ls.size();
-        int swap=size-k+1;
+        int swap=size-k;
         int temp=ls.get(k-1).val;
-        ls.get(k-1).val=ls.get(swap-1).val;
-        ls.get(swap-1).val=temp;
+        ls.get(k-1).val=ls.get(swap).val;
+        ls.get(swap).val=temp;
         return head;
         
     }
