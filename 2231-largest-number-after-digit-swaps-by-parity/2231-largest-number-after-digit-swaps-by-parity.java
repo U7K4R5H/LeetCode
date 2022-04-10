@@ -14,28 +14,27 @@ class Solution {
                 oddList.add(chars[i]);
             }
         }
-        
+        //Sort in decending order for largest digit to occur first in the list
         Collections.sort(evenList, Collections.reverseOrder());
         Collections.sort(oddList, Collections.reverseOrder());
         
-        //Construction of the result
+        //Construction of the result using Math
+		// here adding max(even or odd) number from lists to the result based on the number previously present at the same index
         
         int eIndex = 0, oddIndex = 0, res = 0;
         
         for(int i=0; i<chars.length; i++) {
             if(chars[i] % 2 == 0) {
                 res *= 10;
-                res += Character.getNumericValue(evenList.get(eIndex));
+                res += Character.getNumericValue(evenList.get(eIndex)); // Given digit value
                 eIndex++;
             }
             else {
                 res *= 10;
-                res += Integer.parseInt(String.valueOf(oddList.get(oddIndex)));
+                res += Integer.parseInt(String.valueOf(oddList.get(oddIndex))); // Given digit value
                 oddIndex++;
             }
         }
-        
         return res;
     }
-
 }
