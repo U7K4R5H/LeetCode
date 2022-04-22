@@ -1,4 +1,4 @@
-class MyHashMap {
+/*class MyHashMap {
     private HashMap<Integer, Integer> hm;
     public MyHashMap() {
         hm = new HashMap<>();
@@ -16,6 +16,25 @@ class MyHashMap {
     
     public void remove(int key) {
         if(hm.containsKey(key)) hm.remove(key);
+    }
+}*/
+
+class MyHashMap {
+    int[] map;
+    public MyHashMap() {
+        map = new int[1000000+1];
+    }
+    
+    public void put(int key, int value) {
+        map[key] = value+1;
+    }
+    
+    public int get(int key) {
+        return map[key]-1;
+    }
+    
+    public void remove(int key) {
+        map[key] = 0;
     }
 }
 
