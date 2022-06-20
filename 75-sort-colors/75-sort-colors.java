@@ -30,24 +30,22 @@ class Solution {
         while (mid <= hi) { 
             switch (nums[mid]) { 
                 case 0: { 
-                    temp = nums[lo]; 
-                    nums[lo] = nums[mid]; 
-                    nums[mid] = temp; 
-                    lo++; 
-                    mid++; 
+                    swap(lo++, mid++, nums);
                     break; 
                 } 
                 case 1: 
                     mid++; 
                     break; 
                 case 2: { 
-                    temp = nums[mid]; 
-                    nums[mid] = nums[hi]; 
-                    nums[hi] = temp; 
-                    hi--; 
+                    swap(mid, hi--, nums); 
                     break; 
                 } 
             } 
         }
+    }
+    private void swap(int i, int j, int[] arr) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 }
