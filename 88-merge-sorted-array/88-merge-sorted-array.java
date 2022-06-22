@@ -20,7 +20,8 @@ class Solution {
             nums1[m+x] = nums2[x];
         }
     } */
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
+    
+   /* public void merge(int[] nums1, int m, int[] nums2, int n) {
         if(n != 0 && m != 0) {
     
         for(int i=0; i<m; i++) {
@@ -43,10 +44,43 @@ class Solution {
                 nums1[m+x] = nums2[x];
             }
         }
+    } */
+    
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        if(m == 0 && n != 0) {
+            for(int x=0; x<n; x++) {
+                nums1[m+x] = nums2[x];
+            }
+        }
+        
+        for(int x=0; x<n; x++) {
+            nums1[m+x] = nums2[x];
+        }
+        
+        //Shell Sort
+        
+        for(int gap = (m + n) / 2; gap >= 1; gap /= 2) {
+            for(int j=gap; j < (m + n); j++) {
+                for(int i = j - gap; i>=0; i--) {
+                    if(nums1[i + gap] > nums1[i]) {
+                        break;
+                    }
+                    else {
+                        swap(nums1, i + gap, i);
+                    }
+                }
+            }
+        } 
     }
+    
     public void swap(int a[], int b[], int i, int j) {
         int temp = a[i];
         a[i] = b[j];
         b[j] = temp;
+    }
+        public void swap(int a[], int i, int j) {
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
     }
 }
