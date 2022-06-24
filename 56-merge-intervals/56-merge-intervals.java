@@ -28,3 +28,6 @@ class Solution {
         return res.toArray(new int[0][]);
     }
 }
+
+//TC = O(Nlogn) + O(N)
+//SC = O(N)
