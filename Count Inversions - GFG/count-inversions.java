@@ -60,7 +60,7 @@ class Solution
         long mid=0, inv=0;
         if(right>left){
             mid=(left+right)/2;
-            inv+=mergeSort(arr,temp,left,mid);
+            inv=mergeSort(arr,temp,left,mid);
             inv+=mergeSort(arr,temp,mid+1,right);
             inv+=merge(arr,temp,left,mid+1,right);
         }
