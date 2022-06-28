@@ -39,9 +39,26 @@ class Solution {
     }
 } */
 
+//Moore’s Voting Algorithm
+class Solution {
+    public int majorityElement(int[] nums) {
+        int count = 0, candidate = 0;
+        for(int num : nums) {
+            if(count == 0) {
+                candidate = num;
+            }
+            count += (num == candidate) ? 1 : -1;
+        }
+        return candidate;
+    }
+}
+
+
+/* Tc:- O(nlog n) SC:- O(1)
 class Solution {
     public int majorityElement(int[] nums) {
         Arrays.sort(nums);
         return nums[nums.length/2];
     }
-} 
+} */
+
