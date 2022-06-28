@@ -39,7 +39,7 @@ class Solution {
     }
 } */
 
-//Moore’s Voting Algorithm
+//Moore’s Voting Algorithm TC:- O(n) SC:- O(1)
 class Solution {
     public int majorityElement(int[] nums) {
         int count = 0, candidate = 0;
