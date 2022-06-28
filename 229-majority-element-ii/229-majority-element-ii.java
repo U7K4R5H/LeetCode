@@ -13,6 +13,7 @@ class Solution {
     }
 } */
 
+//Extended Boyer Moore’s Voting Algorithm
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
         
