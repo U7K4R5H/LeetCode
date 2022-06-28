@@ -19,6 +19,7 @@ class Solution {
     }
 } */
 
+/* Using HashMap TC:- O(nlog n) SC:- O(x) x=distinct element in array
 class Solution {
     public int majorityElement(int[] nums) {
         int res = 0;
@@ -36,4 +37,11 @@ class Solution {
         }
         return res;
     }
-}
+} */
+
+class Solution {
+    public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+    }
+} 
