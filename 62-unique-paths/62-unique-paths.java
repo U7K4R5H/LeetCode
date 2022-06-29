@@ -1,4 +1,4 @@
-// Recursion with Memoization TopDown approach
+/* // Recursion with Memoization TopDown approach
 class Solution {
     public int uniquePaths(int m, int n) {
         
@@ -18,5 +18,18 @@ class Solution {
         else if(dp[i][j] != -1) return dp[i][j];
         
         else return dp[i][j] = countPaths(i + 1, j, m, n, dp) + countPaths(i, j + 1, m, n, dp);
+    }
+} */
+
+// Combinatrix Sol
+class Solution {
+    public int uniquePaths(int m, int n) {
+        int N = m + n - 2;
+        int r = n - 1;
+        double result = 1;
+        for(int i=1; i<=r; i++) {
+            result = result * (N - r + i) / i;
+        }
+        return (int)result;
     }
 }
