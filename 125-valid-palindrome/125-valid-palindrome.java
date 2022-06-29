@@ -11,6 +11,6 @@ class Solution {
         
         if(ch[i] != ch[ch.length - 1 - i]) return false;
         
-        return checkPalindrome(ch, i+1);
+        return checkPalindrome(ch, i + 1);
     }
 }
