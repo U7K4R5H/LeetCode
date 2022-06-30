@@ -1,4 +1,4 @@
-// Using Two Pointer approach for lat two no
+// Using Two Pointer approach for last two no
 
 class Solution {
     public List<List<Integer>> fourSum(int[] num, int target) {
