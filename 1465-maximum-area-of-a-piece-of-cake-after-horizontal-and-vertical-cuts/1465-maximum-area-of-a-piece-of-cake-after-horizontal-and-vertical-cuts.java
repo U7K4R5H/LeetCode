@@ -1,7 +1,6 @@
 class Solution {
     public int maxArea(int h, int w, int[] horizontalCuts, int[] verticalCuts) {
-        long ans = 1L * getMax(h, horizontalCuts) * getMax(w, verticalCuts);
-        return (int)(ans % 1000000007);
+        return (int)(1L * getMax(h, horizontalCuts) * getMax(w, verticalCuts) % 1000000007 );
     }
     public int getMax(int x, int[] arr) {
         sort(arr);
