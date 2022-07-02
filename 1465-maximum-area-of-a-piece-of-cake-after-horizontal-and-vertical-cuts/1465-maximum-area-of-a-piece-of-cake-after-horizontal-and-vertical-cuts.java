@@ -1,6 +1,6 @@
 class Solution {
     public int maxArea(int h, int w, int[] horizontalCuts, int[] verticalCuts) {
-        long ans = 1L * (long)getMax(h, horizontalCuts) * (long)getMax(w, verticalCuts);
+        long ans = (long)getMax(h, horizontalCuts) * (long)getMax(w, verticalCuts);
         return (int)(ans % 1000000007);
     }
     public int getMax(int x, int[] arr) {
@@ -11,7 +11,7 @@ class Solution {
             max = Math.max(max, arr[i] - arr[i - 1]);
         return max;
     }
-    public void sort(int[] arr) {
+    public void sort(int[] arr) { // can skip this implementation
         //because Arrays.sort() uses quicksort which is dumb
         //Collections.sort() uses merge sort
         ArrayList<Integer> ls = new ArrayList<Integer>();
