@@ -5,3 +5,5 @@ Prerequistic Data Structure :- hashmap aka unordered_map in C++ STL [read here](
 [OG GFG Article](https://www.geeksforgeeks.org/count-distinct-subsequences/)
 
 Check GFG Practice tutorial [Click here](https://practice.geeksforgeeks.org/problems/number-of-distinct-subsequences0909/1)
+
+[Leetcode Question link](https://leetcode.com/problems/distinct-subsequences-ii/)
