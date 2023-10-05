@@ -1,4 +1,4 @@
-​[Leetcote Solution](https//leetcode.com/problems/majority-element-ii/solutions/543672/boyer-moore-majority-vote-algorithm-explained/)
+​[Leetcote Solution ](https//leetcode.com/problems/majority-element-ii/solutions/543672/boyer-moore-majority-vote-algorithm-explained/)
 
 Check this Question and notes before proceding to optimize it [CLICK HERE](https://leetcode.com/problems/majority-element/)
 
